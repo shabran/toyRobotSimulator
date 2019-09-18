@@ -45,5 +45,5 @@ if (input.commands) {
     }
 
 } else {
-    console.log("\n\nError: First command should be PLACE command\n\n");
+    console.log("Error");
 }
