@@ -1,25 +1,35 @@
 function robot() {}
 
+//place robot to initial coordinate
 robot.prototype.place = function(xPos, yPos, facing) {
   this.x = parseInt(xPos);
   this.y = parseInt(yPos);
   this.facing = facing;
 };
 
+//move 1 position
 robot.prototype.move = function(tableTop) {
   let facing = this.facing;
   switch (facing) {
     case "NORTH":
-      //action
+      if (this.y < tableTop.ySize - 1) {
+        this.y += 1;
+      }
       break;
     case "SOUTH":
-      //action
+      if (this.y > 0) {
+        this.y -= 1;
+      }
       break;
     case "WEST":
-      //action
+            if(this.x > 0){
+                this.x -= 1; 
+            }
       break;
     case "EAST":
-      //action
+            if(this.x < (tableTop.xSize - 1)){
+                this.x += 1; 
+            }
       break;
   }
 };
@@ -41,4 +51,4 @@ robot.prototype.rotate = function(newFacing) {
   }
 };
 
-module.exports=robot;
+module.exports = robot;
