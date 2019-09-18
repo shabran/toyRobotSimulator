@@ -1,6 +1,6 @@
 const fs = require("fs");
 
-function input(fileName){
+function input(fileName) {
     try {
         //read commands file
         this.commands = fs.readFileSync(fileName).toString().split("\n");
@@ -11,7 +11,24 @@ function input(fileName){
             throw e;
         }
     }
-    
+
 }
 
-module.exports=input;
+input.prototype.getCommandArguments = function(command) {
+    let space = command.indexOf(" ");
+    let argumentString = command.slice(space);
+    let argumentArray = argumentString.split(",");
+    let argumentArrayWithoutSpace = argumentArray.map(s => { return s.trim() });
+    return argumentArrayWithoutSpace;
+};
+
+input.prototype.getCommandWithoutArguments = function(command) {
+    if (command.indexOf(" ") == -1) {
+        return command;
+    }
+    return command.slice(0, command.indexOf(" "));
+};
+
+
+
+module.exports = input;
