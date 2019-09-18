@@ -39,16 +39,16 @@ robot.prototype.move = function(tableTop) {
 robot.prototype.rotate = function(newFacing) {
     switch (this.facing) {
         case "NORTH":
-            this.facing = newFacing == "RIGHT" ? "EAST" : "WEST";
+            this.facing = (newFacing == "RIGHT") ? "EAST" : "WEST";
             break;
         case "SOUTH":
-            this.facing = newFacing == "RIGHT" ? "WEST" : "EAST";
+            this.facing = (newFacing == "RIGHT") ? "WEST" : "EAST";
             break;
         case "WEST":
-            this.facing = newFacing == "RIGHT" ? "NORTH" : "SOUTH";
+            this.facing = (newFacing == "RIGHT") ? "NORTH" : "SOUTH";
             break;
         case "EAST":
-            this.facing = newFacing == "RIGHT" ? "SOUTH" : "NORTH";
+            this.facing = (newFacing == "RIGHT") ? "SOUTH" : "NORTH";
             break;
     }
 };
