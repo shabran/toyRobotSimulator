@@ -1,0 +1,19 @@
+{
+  "name": "toyrobotsimulator",
+  "version": "1.0.0",
+  "description": "This is one of the coding test that I did recently. The application is a simulation of a toy robot moving on a square tabletop, of dimensions 5 units x 5 units. There are no other obstructions on the table surface. The robot is free to roam around the surface of the table, but must be prevented from falling to destruction. Any movement that would result in the robot falling from the table must be prevented, however further valid movement commands must still be allowed.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shabran/toyRobotSimulator.git"
+  },
+  "author": "Shabran Ahmad",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/shabran/toyRobotSimulator/issues"
+  },
+  "homepage": "https://github.com/shabran/toyRobotSimulator#readme"
+}
