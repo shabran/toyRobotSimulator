@@ -1,5 +1,5 @@
 let args = process.argv[2];
-
+console.log(args);
 const TableTop = require('./tableTop'),
     Input = require('./input'),
     Robot = require('./robot');
