@@ -1,8 +1,8 @@
 let args = process.argv[2];
 
-const TableTop = require('./tableTop'),
-    Input = require('./input'),
-    Robot = require('./robot');
+const TableTop = require('./services/tableTop'),
+    Input = require('./services/input'),
+    Robot = require('./services/robot');
 
 let tableTop = new TableTop(5, 5);
 let robot = new Robot();
